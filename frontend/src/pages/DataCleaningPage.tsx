@@ -34,7 +34,21 @@ export const DataCleaningPage: React.FC = () => {
         if (beforeRes.data.success) setBeforeSample(beforeRes.data.data);
         if (afterRes.data.success) setAfterSample(afterRes.data.data);
       } catch (err) {
-        console.error("Cleaning page fetch error:", err);
+        console.error("Cleaning page fetch error, using client fallback samples:", err);
+        setBeforeSample([
+          { date_time: '2012-10-02 09:00:00', traffic_volume: 5545, temp: 288.28, holiday: 'None' },
+          { date_time: '2012-10-02 10:00:00', traffic_volume: 4516, temp: 289.36, holiday: 'None' },
+          { date_time: '2012-10-02 11:00:00', traffic_volume: 4767, temp: 289.58, holiday: 'None' },
+          { date_time: '2012-10-02 12:00:00', traffic_volume: 5026, temp: 290.13, holiday: 'None' },
+          { date_time: '2012-10-02 13:00:00', traffic_volume: 4918, temp: 291.14, holiday: 'None' }
+        ]);
+        setAfterSample([
+          { date_time: '2012-10-02 09:00:00', traffic_volume: 5545, temp_celsius: 15.1, holiday: 'Regular Day' },
+          { date_time: '2012-10-02 10:00:00', traffic_volume: 4516, temp_celsius: 16.2, holiday: 'Regular Day' },
+          { date_time: '2012-10-02 11:00:00', traffic_volume: 4767, temp_celsius: 16.4, holiday: 'Regular Day' },
+          { date_time: '2012-10-02 12:00:00', traffic_volume: 5026, temp_celsius: 17.0, holiday: 'Regular Day' },
+          { date_time: '2012-10-02 13:00:00', traffic_volume: 4918, temp_celsius: 18.0, holiday: 'Regular Day' }
+        ]);
       } finally {
         setLoading(false);
       }
