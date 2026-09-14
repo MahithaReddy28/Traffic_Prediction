@@ -373,17 +373,17 @@ export const PredictionPage: React.FC = () => {
                 key="result"
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="glass-panel p-6 rounded-2xl border-2 border-sky-500/50 bg-white dark:bg-[#111827] space-y-6 shadow-2xl"
+                className="glass-panel p-6 rounded-2xl border-2 border-sky-400 dark:border-sky-400 bg-white dark:bg-[#1e293b] space-y-6 shadow-2xl neon-glow-cyan"
               >
                 <div>
-                  <span className="text-xs font-bold text-sky-600 dark:text-sky-400 uppercase tracking-widest">
+                  <span className="text-sm font-extrabold text-sky-600 dark:text-sky-300 uppercase tracking-widest">
                     {t('predict.resultTitle')}
                   </span>
-                  <div className="text-4xl font-black text-slate-900 dark:text-white mt-2">
+                  <div className="text-5xl font-black text-slate-900 dark:text-white mt-2">
                     {prediction.predicted_volume?.toLocaleString()}
-                    <span className="text-sm font-bold text-slate-800 dark:text-slate-100 ml-2">{t('kpis.vehiclesPerHour')}</span>
+                    <span className="text-base font-extrabold text-sky-500 dark:text-sky-300 ml-2">{t('kpis.vehiclesPerHour')}</span>
                   </div>
-                  <p className="text-xs text-slate-800 dark:text-slate-200 mt-1 font-semibold">
+                  <p className="text-xs text-slate-800 dark:text-sky-200 mt-1.5 font-bold">
                     {t('predict.modelUsed')}: {prediction.model_used} ({prediction.model_version})
                   </p>
                 </div>
@@ -393,13 +393,13 @@ export const PredictionPage: React.FC = () => {
                   const badge = getSeverityBadge(prediction.traffic_level);
                   const Icon = badge.icon;
                   return (
-                    <div className={`p-4 rounded-xl border flex items-center space-x-3 ${badge.bg}`}>
-                      <Icon className="w-6 h-6 flex-shrink-0" />
+                    <div className={`p-4 rounded-xl border-2 flex items-center space-x-3 ${badge.bg}`}>
+                      <Icon className="w-7 h-7 flex-shrink-0" />
                       <div>
-                        <div className="text-xs font-bold uppercase tracking-wider">
+                        <div className="text-xs font-black uppercase tracking-wider">
                           {t('predict.severityTitle')}
                         </div>
-                        <div className="text-lg font-extrabold">
+                        <div className="text-xl font-black">
                           {badge.label}
                         </div>
                       </div>
@@ -408,8 +408,8 @@ export const PredictionPage: React.FC = () => {
                 })()}
 
                 {/* Management Recommendation */}
-                <div className="p-4 rounded-xl bg-slate-100 dark:bg-[#1f2937] border border-slate-300 dark:border-slate-600 space-y-1">
-                  <span className="text-xs font-extrabold text-sky-700 dark:text-sky-400 uppercase tracking-wider">
+                <div className="p-4 rounded-xl bg-sky-50 dark:bg-[#0f172a] border-2 border-sky-400 dark:border-sky-400 space-y-1">
+                  <span className="text-xs font-black text-sky-600 dark:text-sky-300 uppercase tracking-wider">
                     {t('predict.recTitle')}
                   </span>
                   <p className="text-sm text-slate-900 dark:text-white leading-relaxed font-bold">

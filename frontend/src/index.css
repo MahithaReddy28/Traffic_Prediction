@@ -17,16 +17,16 @@
   }
 
   .dark {
-    --bg-primary: #080c14;
-    --bg-secondary: #0f172a;
-    --bg-card: #0f172a;
-    --border-color: #334155;
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-card: #1e293b;
+    --border-color: #38bdf8;
     --text-primary: #ffffff;
-    --text-secondary: #f8fafc;
-    --text-muted: #e2e8f0;
+    --text-secondary: #ffffff;
+    --text-muted: #7dd3fc;
     --accent-cyan: #38bdf8;
     --accent-blue: #60a5fa;
-    --card-glow: rgba(56, 189, 248, 0.35);
+    --card-glow: rgba(56, 189, 248, 0.4);
     color: #ffffff;
   }
 
@@ -47,26 +47,27 @@
   }
 }
 
-/* Dark Mode Background Pattern */
+/* Hyper-Bright Dark Mode Background Pattern */
 .dark body {
+  background-color: #0f172a !important;
   background-image: 
-    radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.08) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.08) 0px, transparent 50%),
-    radial-gradient(at 50% 100%, rgba(14, 165, 233, 0.05) 0px, transparent 50%);
+    radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(14, 165, 233, 0.12) 0px, transparent 50%);
   background-attachment: fixed;
 }
 
-/* Ultra High-Contrast Dark Mode Card & Panel Utility */
+/* Luminous Glowing High-Brightness Glass Panels */
 .glass-panel {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3);
 }
 
 .dark .glass-panel {
-  background: #0f172a !important;
-  border-color: #334155 !important;
-  box-shadow: 0 12px 35px -5px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+  background: #1e293b !important;
+  border: 2px solid #38bdf8 !important;
+  box-shadow: 0 12px 40px rgba(56, 189, 248, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
 }
 
 .glass-panel-hover {
@@ -75,59 +76,74 @@
 
 .glass-panel-hover:hover {
   transform: translateY(-3px);
-  box-shadow: 0 16px 50px -5px var(--card-glow);
-  border-color: #38bdf8 !important;
+  box-shadow: 0 16px 50px -5px rgba(56, 189, 248, 0.5) !important;
+  border-color: #7dd3fc !important;
 }
 
-/* Global Dark Mode High Contrast Form Controls */
+/* Luminous High-Brightness Dark Mode Form Controls */
 .dark input,
 .dark select,
 .dark textarea {
-  background-color: #1e293b !important;
+  background-color: #0f172a !important;
   color: #ffffff !important;
-  border: 2px solid #475569 !important;
-  font-weight: 700 !important;
+  border: 2px solid #38bdf8 !important;
+  font-weight: 800 !important;
+  font-size: 0.95rem !important;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.15) !important;
 }
 
 .dark input:focus,
 .dark select:focus,
 .dark textarea:focus {
-  border-color: #38bdf8 !important;
-  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.3) !important;
+  border-color: #7dd3fc !important;
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.5) !important;
+  outline: none !important;
 }
 
 .dark option,
 .dark optgroup {
-  background-color: #0f172a !important;
-  color: #ffffff !important;
-}
-
-/* Global Dark Mode Text Brightness Enhancements */
-.dark label {
+  background-color: #1e293b !important;
   color: #ffffff !important;
   font-weight: 700 !important;
+}
+
+/* Hyper-Bright Dark Mode Labels & Typography */
+.dark label {
+  color: #38bdf8 !important;
+  font-weight: 800 !important;
+  font-size: 0.85rem !important;
+  letter-spacing: 0.03em !important;
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
 }
 
 .dark .text-slate-600,
 .dark .text-slate-500,
 .dark .text-slate-400,
-.dark .text-slate-300 {
-  color: #f1f5f9 !important;
+.dark .text-slate-300,
+.dark .text-slate-200 {
+  color: #ffffff !important;
+  font-weight: 600 !important;
 }
 
 .dark .text-slate-700,
 .dark .text-slate-800,
 .dark .text-slate-900 {
   color: #ffffff !important;
+  font-weight: 700 !important;
 }
 
-/* Neon Glow Accents */
+.dark h1, .dark h2, .dark h3, .dark h4 {
+  color: #ffffff !important;
+  text-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+}
+
+/* Bright Neon Badges & Highlights */
 .neon-glow-cyan {
-  box-shadow: 0 0 20px -3px rgba(56, 189, 248, 0.45);
+  box-shadow: 0 0 25px 2px rgba(56, 189, 248, 0.5);
 }
 
 .neon-glow-blue {
-  box-shadow: 0 0 25px -3px rgba(37, 99, 235, 0.5);
+  box-shadow: 0 0 30px 2px rgba(37, 99, 235, 0.6);
 }
 
 /* Custom Scrollbar */
@@ -141,12 +157,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(148, 163, 184, 0.5);
+  background: rgba(56, 189, 248, 0.5);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(56, 189, 248, 0.9);
+  background: rgba(56, 189, 248, 1);
 }
 
 /* Leaflet Map Styling */
