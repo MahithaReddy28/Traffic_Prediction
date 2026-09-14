@@ -198,10 +198,10 @@ export const PredictionPage: React.FC = () => {
     <div className="space-y-8">
       {/* Header */}
       <div>
-        <h1 className="text-4xl font-black tracking-tight text-slate-900 dark:text-white drop-shadow-md">
+        <h1 className="text-3xl font-extrabold tracking-tight bg-gradient-to-r from-slate-900 via-sky-800 to-slate-900 dark:from-white dark:via-sky-200 dark:to-slate-100 bg-clip-text text-transparent">
           {t('predict.title')}
         </h1>
-        <p className="text-base text-slate-800 dark:text-slate-100 mt-2 font-extrabold">
+        <p className="text-sm text-slate-900 dark:text-white mt-1 font-bold">
           {t('predict.subtitle')}
         </p>
       </div>
@@ -209,8 +209,8 @@ export const PredictionPage: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         
         {/* Prediction Input Form */}
-        <div className="lg:col-span-7 glass-panel p-7 rounded-2xl border-2 border-sky-400 dark:border-sky-400 bg-white dark:bg-[#1e293b] shadow-2xl neon-glow-cyan">
-          <h2 className="text-xl font-black text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+        <div className="lg:col-span-7 glass-panel p-6 rounded-2xl border-2 border-slate-300 dark:border-slate-700 bg-white dark:bg-[#0f172a] shadow-xl">
+          <h2 className="text-lg font-extrabold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
             <Compass className="w-5 h-5 text-sky-500" />
             <span>{t('predict.targetForm')}</span>
           </h2>
@@ -430,10 +430,10 @@ export const PredictionPage: React.FC = () => {
                 </div>
               </motion.div>
             ) : (
-              <div className="glass-panel p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 text-center flex flex-col items-center justify-center min-h-[350px]">
-                <Gauge className="w-12 h-12 text-slate-400 dark:text-slate-500 mb-3" />
-                <h3 className="text-base font-bold text-slate-800 dark:text-slate-200">{t('predict.noResultTitle')}</h3>
-                <p className="text-xs text-slate-600 dark:text-slate-300 max-w-xs mt-1 font-medium">
+              <div className="glass-panel p-8 rounded-2xl border-2 border-sky-400 dark:border-sky-400 bg-white dark:bg-[#111827] text-center flex flex-col items-center justify-center min-h-[350px] shadow-2xl">
+                <Gauge className="w-14 h-14 text-sky-400 mb-4 animate-pulse" />
+                <h3 className="text-xl font-black text-slate-900 dark:text-white">{t('predict.noResultTitle')}</h3>
+                <p className="text-sm text-slate-700 dark:text-sky-200 max-w-xs mt-2 font-bold leading-relaxed">
                   {t('predict.noResultSub')}
                 </p>
               </div>
