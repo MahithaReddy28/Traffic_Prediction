@@ -17,7 +17,7 @@
   }
 
   .dark {
-    --bg-primary: #0f172a;
+    --bg-primary: #0b0f19;
     --bg-secondary: #1e293b;
     --bg-card: #1e293b;
     --border-color: #38bdf8;
@@ -26,7 +26,7 @@
     --text-muted: #7dd3fc;
     --accent-cyan: #38bdf8;
     --accent-blue: #60a5fa;
-    --card-glow: rgba(56, 189, 248, 0.4);
+    --card-glow: rgba(56, 189, 248, 0.5);
     color: #ffffff;
   }
 
@@ -49,15 +49,15 @@
 
 /* Hyper-Bright Dark Mode Background Pattern */
 .dark body {
-  background-color: #0f172a !important;
+  background-color: #0b0f19 !important;
   background-image: 
-    radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.15) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
-    radial-gradient(at 50% 100%, rgba(14, 165, 233, 0.12) 0px, transparent 50%);
+    radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.2) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.2) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(14, 165, 233, 0.15) 0px, transparent 50%);
   background-attachment: fixed;
 }
 
-/* Luminous Glowing High-Brightness Glass Panels */
+/* Luminous High-Contrast Card Panels */
 .glass-panel {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
@@ -67,7 +67,7 @@
 .dark .glass-panel {
   background: #1e293b !important;
   border: 2px solid #38bdf8 !important;
-  box-shadow: 0 12px 40px rgba(56, 189, 248, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 12px 40px rgba(56, 189, 248, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
 }
 
 .glass-panel-hover {
@@ -76,11 +76,11 @@
 
 .glass-panel-hover:hover {
   transform: translateY(-3px);
-  box-shadow: 0 16px 50px -5px rgba(56, 189, 248, 0.5) !important;
+  box-shadow: 0 16px 50px -5px rgba(56, 189, 248, 0.6) !important;
   border-color: #7dd3fc !important;
 }
 
-/* Luminous High-Brightness Dark Mode Form Controls */
+/* High-Visibility Form Controls */
 .dark input,
 .dark select,
 .dark textarea {
@@ -88,15 +88,15 @@
   color: #ffffff !important;
   border: 2px solid #38bdf8 !important;
   font-weight: 800 !important;
-  font-size: 0.95rem !important;
-  box-shadow: 0 0 10px rgba(56, 189, 248, 0.15) !important;
+  font-size: 1rem !important;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.25) !important;
 }
 
 .dark input:focus,
 .dark select:focus,
 .dark textarea:focus {
-  border-color: #7dd3fc !important;
-  box-shadow: 0 0 16px rgba(56, 189, 248, 0.5) !important;
+  border-color: #fde047 !important;
+  box-shadow: 0 0 20px rgba(253, 224, 71, 0.5) !important;
   outline: none !important;
 }
 
@@ -104,16 +104,38 @@
 .dark optgroup {
   background-color: #1e293b !important;
   color: #ffffff !important;
+  font-weight: 800 !important;
+}
+
+/* High-Visibility Typography & Text Glow */
+.dark label {
+  color: #fde047 !important; /* Vivid Yellow Label Text */
+  font-weight: 900 !important;
+  font-size: 0.9rem !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  text-shadow: 0 0 8px rgba(253, 224, 71, 0.4) !important;
+}
+
+.dark p,
+.dark span,
+.dark div,
+.dark li,
+.dark th,
+.dark td {
+  color: #ffffff !important;
   font-weight: 700 !important;
 }
 
-/* Hyper-Bright Dark Mode Labels & Typography */
-.dark label {
-  color: #38bdf8 !important;
-  font-weight: 800 !important;
-  font-size: 0.85rem !important;
-  letter-spacing: 0.03em !important;
-  text-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: #ffffff !important;
+  font-weight: 900 !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9), 0 0 20px rgba(56, 189, 248, 0.6) !important;
 }
 
 .dark .text-slate-600,
@@ -122,47 +144,35 @@
 .dark .text-slate-300,
 .dark .text-slate-200 {
   color: #ffffff !important;
-  font-weight: 600 !important;
-}
-
-.dark .text-slate-700,
-.dark .text-slate-800,
-.dark .text-slate-900 {
-  color: #ffffff !important;
   font-weight: 700 !important;
 }
 
-.dark h1, .dark h2, .dark h3, .dark h4 {
-  color: #ffffff !important;
-  text-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
-}
-
-/* Bright Neon Badges & Highlights */
+/* Neon Glow Utility */
 .neon-glow-cyan {
-  box-shadow: 0 0 25px 2px rgba(56, 189, 248, 0.5);
+  box-shadow: 0 0 30px 4px rgba(56, 189, 248, 0.6);
 }
 
-.neon-glow-blue {
-  box-shadow: 0 0 30px 2px rgba(37, 99, 235, 0.6);
+.neon-glow-yellow {
+  box-shadow: 0 0 30px 4px rgba(253, 224, 71, 0.6);
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: #0f172a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(56, 189, 248, 0.5);
-  border-radius: 4px;
+  background: #38bdf8;
+  border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(56, 189, 248, 1);
+  background: #fde047;
 }
 
 /* Leaflet Map Styling */
