@@ -109,7 +109,7 @@ export const DashboardPage: React.FC = () => {
           className="glass-panel glass-panel-hover p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80"
         >
           <div className="flex items-center justify-between">
-            <span className="text-xs font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-wider">
+            <span className="text-xs font-semibold text-slate-900 dark:text-slate-100 font-bold uppercase tracking-wider">
               {t('kpis.totalRecords')}
             </span>
             <div className="p-2.5 rounded-xl bg-sky-500/10 text-sky-500 dark:text-sky-400">
@@ -120,7 +120,7 @@ export const DashboardPage: React.FC = () => {
             <div className="text-2xl font-black tracking-tight text-slate-900 dark:text-white">
               {overview?.total_records?.toLocaleString() || '48,187'}
             </div>
-            <p className="text-xs text-slate-600 dark:text-slate-300 mt-1 flex items-center gap-1 font-medium">
+            <p className="text-xs text-slate-900 dark:text-slate-100 font-bold mt-1 flex items-center gap-1 font-medium">
               <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400" /> {t('kpis.cleanedDataset')}
             </p>
           </div>
@@ -134,7 +134,7 @@ export const DashboardPage: React.FC = () => {
           className="glass-panel glass-panel-hover p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80"
         >
           <div className="flex items-center justify-between">
-            <span className="text-xs font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-wider">
+            <span className="text-xs font-semibold text-slate-900 dark:text-slate-100 font-bold uppercase tracking-wider">
               {t('kpis.avgVolume')}
             </span>
             <div className="p-2.5 rounded-xl bg-blue-500/10 text-blue-500 dark:text-blue-400">
@@ -144,9 +144,9 @@ export const DashboardPage: React.FC = () => {
           <div className="mt-4">
             <div className="text-2xl font-black tracking-tight text-slate-900 dark:text-white">
               {overview?.avg_volume ? `${overview.avg_volume}` : '3,259.8'}
-              <span className="text-xs font-medium text-slate-600 dark:text-slate-300 ml-1.5">{t('kpis.vehiclesPerHour')}</span>
+              <span className="text-xs font-medium text-slate-900 dark:text-slate-100 font-bold ml-1.5">{t('kpis.vehiclesPerHour')}</span>
             </div>
-            <p className="text-xs text-slate-600 dark:text-slate-300 mt-1 flex items-center gap-1 font-medium">
+            <p className="text-xs text-slate-900 dark:text-slate-100 font-bold mt-1 flex items-center gap-1 font-medium">
               <TrendingUp className="w-3.5 h-3.5 text-sky-500 dark:text-sky-400" /> {t('kpis.maxVolume')}: {overview?.max_volume?.toLocaleString()} {t('kpis.vehiclesPerHour')}
             </p>
           </div>
@@ -160,7 +160,7 @@ export const DashboardPage: React.FC = () => {
           className="glass-panel glass-panel-hover p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80"
         >
           <div className="flex items-center justify-between">
-            <span className="text-xs font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-wider">
+            <span className="text-xs font-semibold text-slate-900 dark:text-slate-100 font-bold uppercase tracking-wider">
               {t('kpis.peakHour')}
             </span>
             <div className="p-2.5 rounded-xl bg-amber-500/10 text-amber-500 dark:text-amber-400">
@@ -171,7 +171,7 @@ export const DashboardPage: React.FC = () => {
             <div className="text-2xl font-black tracking-tight text-slate-900 dark:text-white">
               {overview?.peak_hour !== undefined ? `${overview.peak_hour}:00 HRS` : '17:00 HRS'}
             </div>
-            <p className="text-xs text-slate-600 dark:text-slate-300 mt-1 font-medium">
+            <p className="text-xs text-slate-900 dark:text-slate-100 font-bold mt-1 font-medium">
               {t('kpis.rushHour')}
             </p>
           </div>
@@ -185,7 +185,7 @@ export const DashboardPage: React.FC = () => {
           className="glass-panel glass-panel-hover p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80"
         >
           <div className="flex items-center justify-between">
-            <span className="text-xs font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-wider">
+            <span className="text-xs font-semibold text-slate-900 dark:text-slate-100 font-bold uppercase tracking-wider">
               {t('kpis.bestModel')}
             </span>
             <div className="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-500 dark:text-emerald-400">
@@ -197,7 +197,7 @@ export const DashboardPage: React.FC = () => {
               {activeModel?.model_name || 'XGBoost'}
               <span className="text-xs font-semibold text-emerald-500 dark:text-emerald-400 ml-2">R² {activeModel?.r2 || '0.9472'}</span>
             </div>
-            <p className="text-xs text-slate-600 dark:text-slate-300 mt-1 font-medium">
+            <p className="text-xs text-slate-900 dark:text-slate-100 font-bold mt-1 font-medium">
               MAE: {activeModel?.mae || '280.1'} | RMSE: {activeModel?.rmse || '455.8'}
             </p>
           </div>
@@ -209,7 +209,7 @@ export const DashboardPage: React.FC = () => {
         <div className="flex items-center justify-between mb-6">
           <div>
             <h2 className="text-lg font-bold text-slate-900 dark:text-white">{t('dashboard.hourlyTitle')}</h2>
-            <p className="text-xs text-slate-600 dark:text-slate-300 font-medium">{t('dashboard.hourlySubtitle')}</p>
+            <p className="text-xs text-slate-900 dark:text-slate-100 font-bold font-medium">{t('dashboard.hourlySubtitle')}</p>
           </div>
         </div>
 

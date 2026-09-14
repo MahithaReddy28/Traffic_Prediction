@@ -373,7 +373,7 @@ export const PredictionPage: React.FC = () => {
                 key="result"
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="glass-panel p-6 rounded-2xl border border-sky-500/40 bg-gradient-to-b from-sky-500/10 via-slate-900/60 to-slate-900/90 dark:from-sky-950/40 dark:to-slate-900/95 space-y-6"
+                className="glass-panel p-6 rounded-2xl border-2 border-sky-500/50 bg-white dark:bg-[#111827] space-y-6 shadow-2xl"
               >
                 <div>
                   <span className="text-xs font-bold text-sky-600 dark:text-sky-400 uppercase tracking-widest">
@@ -381,9 +381,9 @@ export const PredictionPage: React.FC = () => {
                   </span>
                   <div className="text-4xl font-black text-slate-900 dark:text-white mt-2">
                     {prediction.predicted_volume?.toLocaleString()}
-                    <span className="text-sm font-semibold text-slate-600 dark:text-slate-300 ml-2">{t('kpis.vehiclesPerHour')}</span>
+                    <span className="text-sm font-bold text-slate-800 dark:text-slate-100 ml-2">{t('kpis.vehiclesPerHour')}</span>
                   </div>
-                  <p className="text-xs text-slate-600 dark:text-slate-300 mt-1 font-medium">
+                  <p className="text-xs text-slate-800 dark:text-slate-200 mt-1 font-semibold">
                     {t('predict.modelUsed')}: {prediction.model_used} ({prediction.model_version})
                   </p>
                 </div>
@@ -396,10 +396,10 @@ export const PredictionPage: React.FC = () => {
                     <div className={`p-4 rounded-xl border flex items-center space-x-3 ${badge.bg}`}>
                       <Icon className="w-6 h-6 flex-shrink-0" />
                       <div>
-                        <div className="text-xs font-semibold uppercase tracking-wider">
+                        <div className="text-xs font-bold uppercase tracking-wider">
                           {t('predict.severityTitle')}
                         </div>
-                        <div className="text-lg font-bold">
+                        <div className="text-lg font-extrabold">
                           {badge.label}
                         </div>
                       </div>
@@ -408,24 +408,24 @@ export const PredictionPage: React.FC = () => {
                 })()}
 
                 {/* Management Recommendation */}
-                <div className="p-4 rounded-xl bg-slate-900/90 border border-slate-700/80 space-y-1">
-                  <span className="text-xs font-bold text-sky-400 uppercase tracking-wider">
+                <div className="p-4 rounded-xl bg-slate-100 dark:bg-[#1f2937] border border-slate-300 dark:border-slate-600 space-y-1">
+                  <span className="text-xs font-extrabold text-sky-700 dark:text-sky-400 uppercase tracking-wider">
                     {t('predict.recTitle')}
                   </span>
-                  <p className="text-xs text-slate-100 leading-relaxed font-medium">
+                  <p className="text-sm text-slate-900 dark:text-white leading-relaxed font-bold">
                     "{prediction.recommendation}"
                   </p>
                 </div>
 
                 {/* Feature breakdown */}
-                <div className="text-xs text-slate-600 dark:text-slate-300 space-y-1.5 pt-2 border-t border-slate-200 dark:border-slate-800 font-medium">
+                <div className="text-xs text-slate-800 dark:text-slate-200 space-y-1.5 pt-2 border-t border-slate-200 dark:border-slate-700 font-bold">
                   <div className="flex justify-between">
                     <span>{t('predict.derivedPeak')}:</span>
-                    <span className="font-semibold text-slate-900 dark:text-slate-100">{prediction.derived_features?.is_peak_hour ? 'Yes' : 'No'}</span>
+                    <span className="font-extrabold text-slate-900 dark:text-white">{prediction.derived_features?.is_peak_hour ? 'Yes' : 'No'}</span>
                   </div>
                   <div className="flex justify-between">
                     <span>{t('predict.derivedWeekend')}:</span>
-                    <span className="font-semibold text-slate-900 dark:text-slate-100">{prediction.derived_features?.is_weekend ? 'Weekend' : 'Weekday'}</span>
+                    <span className="font-extrabold text-slate-900 dark:text-white">{prediction.derived_features?.is_weekend ? 'Weekend' : 'Weekday'}</span>
                   </div>
                 </div>
               </motion.div>

@@ -92,8 +92,8 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                   to={item.path}
                   className={`flex items-center space-x-1 px-2 py-1.5 rounded-lg text-[11px] 2xl:text-xs font-semibold transition-all whitespace-nowrap ${
                     isActive
-                      ? 'bg-sky-500/15 text-sky-600 dark:text-sky-400 border border-sky-500/30'
-                      : 'text-slate-700 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/80'
+                      ? 'bg-sky-500 text-white font-bold shadow-md'
+                      : 'text-slate-900 dark:text-white font-semibold hover:bg-slate-200 dark:hover:bg-slate-800'
                   }`}
                 >
                   <Icon className="w-3.5 h-3.5" />

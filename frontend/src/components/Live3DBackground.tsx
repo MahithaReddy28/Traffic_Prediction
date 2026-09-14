@@ -174,7 +174,7 @@ export const Live3DBackground: React.FC<Live3DBackgroundProps> = ({ theme = 'dar
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-[0] transition-opacity duration-700 opacity-40 dark:opacity-50"
+      className="fixed inset-0 pointer-events-none z-[0] transition-opacity duration-700 opacity-25 dark:opacity-30"
       style={{ filter: theme === 'dark' ? 'contrast(1.05)' : 'none' }}
     />
   );
