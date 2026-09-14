@@ -1,0 +1,31 @@
+{
+  "dataset_name": "Metro Interstate Traffic Volume",
+  "rows_before": 48204,
+  "cols_before": 9,
+  "missing_before": {
+    "holiday": 48143,
+    "temp": 0,
+    "rain_1h": 0,
+    "snow_1h": 0,
+    "clouds_all": 0,
+    "weather_main": 0,
+    "weather_description": 0,
+    "date_time": 0,
+    "traffic_volume": 0
+  },
+  "duplicates_removed": 17,
+  "rows_after": 48187,
+  "cols_after": 9,
+  "missing_after": {
+    "holiday": 0,
+    "temp": 0,
+    "rain_1h": 0,
+    "snow_1h": 0,
+    "clouds_all": 0,
+    "weather_main": 0,
+    "weather_description": 0,
+    "date_time": 0,
+    "traffic_volume": 0
+  },
+  "timestamp": "2026-09-01T23:25:29.526807"
+}
