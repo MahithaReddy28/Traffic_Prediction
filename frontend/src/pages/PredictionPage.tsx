@@ -201,7 +201,7 @@ export const PredictionPage: React.FC = () => {
         <h1 className="text-3xl font-extrabold tracking-tight bg-gradient-to-r from-slate-900 via-sky-800 to-slate-900 dark:from-white dark:via-sky-200 dark:to-slate-100 bg-clip-text text-transparent">
           {t('predict.title')}
         </h1>
-        <p className="text-sm text-slate-600 dark:text-slate-300 mt-1 font-medium">
+        <p className="text-sm text-slate-900 dark:text-white mt-1 font-bold">
           {t('predict.subtitle')}
         </p>
       </div>
@@ -209,8 +209,8 @@ export const PredictionPage: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         
         {/* Prediction Input Form */}
-        <div className="lg:col-span-7 glass-panel p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80">
-          <h2 className="text-lg font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+        <div className="lg:col-span-7 glass-panel p-6 rounded-2xl border-2 border-slate-300 dark:border-slate-700 bg-white dark:bg-[#0f172a] shadow-xl">
+          <h2 className="text-lg font-extrabold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
             <Compass className="w-5 h-5 text-sky-500" />
             <span>{t('predict.targetForm')}</span>
           </h2>
